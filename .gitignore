@@ -1,0 +1,4 @@
+projects/ResUNet_Final/checkpoints/
+projects/SwinUNet_Final/checkpoints/
+projects/UNet_Final/checkpoints/
+models/swinunet/pretrained_ckpt/

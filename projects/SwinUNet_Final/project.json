@@ -1,0 +1,49 @@
+{
+    "name": "SwinUnet_Final",
+    "w_size": 224,
+    "data_aug": true,
+    "data_aug_mode": "ctr+tps",
+    "data_dilation": false,
+    "n_epochs": 20,
+    "batch_size": 8,
+    "criterion": "dice+bce",
+    "learning_rate": 1e-05,
+    "weight_decay": 1e-05,
+    "gradient_clipping": 1.0,
+    "amp": false,
+    "sigmoid_threshold": 0.5,
+    "model": {
+        "type": "SwinUnet",
+        "params": {
+            "img_size": 224,
+            "patch_size": 4,
+            "in_chans": 3,
+            "num_classes": 1,
+            "embed_dim": 96,
+            "depths": [
+                2,
+                2,
+                2,
+                2
+            ],
+            "num_heads": [
+                3,
+                6,
+                12,
+                24
+            ],
+            "window_size": 7,
+            "mlp_ratio": 4.0,
+            "qkv_bias": true,
+            "qk_scale": null,
+            "drop_rate": 0.0,
+            "drop_path_rate": 0.2,
+            "ape": false,
+            "patch_norm": true,
+            "use_checkpoint": false,
+            "pretrain_ckpt": "./models/swinunet/pretrained_ckpt/swin_tiny_patch4_window7_224.pth",
+            "zero_head": false,
+            "vis": false
+        }
+    }
+}
